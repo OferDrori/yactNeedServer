@@ -4,6 +4,7 @@ from markupsafe import escape
 from recommender import aiFunc
 
 app = Flask(__name__)
+
 @app.route('/api' ,methods=['POST'])
 def api_ai():
     req_data = request.get_json()
@@ -19,5 +20,6 @@ def api_ai():
 @app.route('/')
 def hello_b():
     return 'fadad'
-if __name__ == '__main__':
-    app.run()
+
+# if __name__ == '__main__':
+#     app.run()
