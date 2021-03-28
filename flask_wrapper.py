@@ -21,5 +21,5 @@ def api_ai():
 def hello_b():
     return 'fadad'
 
-# if __name__ == '__main__':
-#     app.run()
+if __name__ == '__main__':
+    app.run()
