@@ -19,7 +19,7 @@ def api_ai():
 
 @app.route('/')
 def hello_b():
-    return 'fadad'
+    return 'Sail With me'
 
 if __name__ == '__main__':
     app.run()

@@ -25,7 +25,7 @@ def aiFunc( age, yearOfExpiriance, nunberOfChildren,sex):
 
   df = pd.DataFrame(pd.read_excel(open('chooseRiver.xlsx', 'rb')))
   df = df.sample(frac=1)
-  print(len(df))
+  print(len(df),"num of row")
 
 # sns.countplot(df['age:'],hue=df['choosen river'])
   sns.countplot(df['years of expiriance:'],hue=df['choosen river'])
@@ -46,14 +46,13 @@ def aiFunc( age, yearOfExpiriance, nunberOfChildren,sex):
   X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=1)
 
 
-
-  models = [DecisionTreeClassifier,LogisticRegression,]
+##models = [DecisionTreeClassifier,LogisticRegression]
+  models = [LogisticRegression]
   for model in models:
-
     model = model()
     model.fit(X_train,y_train)
     preds = model.predict(X_test)
-    print(accuracy_score(y_test,preds))
+    print(accuracy_score(y_test,preds),"accuracy_score of linear regression")
 
 
 
